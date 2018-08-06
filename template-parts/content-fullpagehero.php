@@ -6,7 +6,9 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> 
+    style="background: url(h'<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' )[0]; ?>') center fixed;
+    background-size: cover;">
     <header class="entry-header">
 		
 		<?php gruene_the_featured_image(); ?>
